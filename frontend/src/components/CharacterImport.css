@@ -1,0 +1,198 @@
+/* Sub-mode tabs — styled like the mode-selector buttons */
+.import-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.import-tab {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: var(--surface-alt);
+  color: var(--text-light);
+}
+
+.import-tab:hover {
+  background: #3a3a3a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.import-tab.active {
+  background: var(--accent);
+  color: #171717;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(196, 163, 90, 0.4);
+  transform: scale(1.02);
+}
+
+/* Select dropdown — match dark theme inputs */
+.import-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #2C2C2C;
+  border-radius: 8px;
+  background: var(--surface-dark);
+  color: var(--text-light);
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23919191'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+.import-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.import-select option {
+  background: var(--surface-dark);
+  color: var(--text-light);
+}
+
+/* Platform detection badge */
+.platform-detection {
+  margin-top: 6px;
+}
+
+.platform-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.platform-badge.detected {
+  background: rgba(40, 167, 69, 0.15);
+  color: #51cf66;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.platform-badge.manual {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffd43b;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.platform-badge.unrecognized {
+  background: rgba(108, 117, 125, 0.15);
+  color: var(--secondary-text);
+  border: 1px solid rgba(108, 117, 125, 0.3);
+}
+
+/* Manual text input */
+.manual-text-input {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.import-hint {
+  color: var(--secondary-text);
+  margin-bottom: 15px;
+}
+
+.import-field-error {
+  display: block;
+  color: var(--error-color, #dc3545);
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.import-notice {
+  color: var(--secondary-text);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 3px solid rgba(255, 193, 7, 0.6);
+  border-radius: 4px;
+}
+
+.import-steps {
+  margin: 6px 0 8px 0;
+  padding-left: 20px;
+}
+
+.import-steps li {
+  margin-bottom: 4px;
+}
+
+/* Platform login buttons (JanitorAI, Character.AI, etc.) */
+.janitor-login-section,
+.cai-login-section {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.janitor-login-btn,
+.cai-login-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.janitor-login-btn:hover:not(:disabled),
+.cai-login-btn:hover:not(:disabled) {
+  background: rgba(196, 163, 90, 0.15);
+}
+
+.janitor-login-btn:disabled,
+.cai-login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-hint {
+  color: var(--secondary-text);
+  font-size: 12px;
+  flex-basis: 100%;
+}
+
+.login-error {
+  color: var(--error-color, #dc3545);
+  font-size: 13px;
+}
+
+.login-success {
+  color: #51cf66;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.platform-status-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.platform-retry-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  white-space: nowrap;
+}
